@@ -11,23 +11,20 @@ public class Diamond {
 		System.out.print("Please enter the height of the diamond (an odd number): ");
 		int height = b.nextInt();
 		
-		if (height % 2 == 0){
+		if (height % 2 == 0 || height <= 0){
 			do {
-			System.out.print("Please enter an odd number: ");
+			System.out.print("Please enter a positive odd number: ");
 			height = b.nextInt();
 			} while (height % 2 == 0);
 		}
 	
-		int space;
-		int stars;
-		int row;
 		
-		for (row = 1; row <= (height +1)/2; row++) {
-			for (space = 1; space <= (height + 1)/2 - row; space ++) {
+		for (int row = 1; row <= (height +1)/2; row++) {
+			for (int space = 1; space <= (height + 1)/2 - row; space ++) {
 			System.out.print(" ");
 			}	
 			
-			stars = 1;
+			int stars = 1;
 		
 			do {
 				System.out.print("*");
@@ -37,11 +34,11 @@ public class Diamond {
 			System.out.println();
 		}
 		
-		for (row = (height + 3)/2; row <= height; row ++) {
-			for (space = 1; space <= row - (height +1) / 2; space ++) {
+		for (int row = (height + 3)/2; row <= height; row ++) {
+			for (int space = 1; space <= row - (height +1) / 2; space ++) {
 				System.out.print(" ");
 			}
-			stars = 1;
+			int stars = 1;
 			do {
 				System.out.print("*");
 				stars ++;
