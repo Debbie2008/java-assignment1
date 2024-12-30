@@ -38,8 +38,10 @@ public class StudentGradingSystem {
 		} else {
 			System.out.println("Grade F.");
 		}
+		
 		System.out.print("Do you want to continue entering marks?(Enter yes or no): ");
 		answer = b.nextLine();
+		
 		} while (answer.equals("yes"));
 		
 		
